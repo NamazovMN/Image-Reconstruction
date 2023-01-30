@@ -17,7 +17,7 @@ def generate_gray_and_resize(image_file, width, height, title):
     axes[0].title.set_text("Original Image")
     axes[1].imshow(image_data_resized, cmap = "gray")
     axes[1].title.set_text("Resized Image")
-    plt.show(f)
+    plt.show()
     f.savefig("results/"+title + ".jpg")
     return image_data_resized
 
@@ -33,7 +33,7 @@ def generate_spectrum(image_data, title):
     axes[0].title.set_text("Spectrum Magnitude")
     axes[1].imshow(image_phase, cmap = "gray")
     axes[1].title.set_text("Spectrum Phase")
-    plt.show(f)
+    plt.show()
     f.savefig("results/"+title + ".jpg")
     return image_mag, image_magnitude, image_phase
 
@@ -42,7 +42,7 @@ def reconstruct_images(magnitude_data, phase_data):
     reconstructed_image = np.real(np.fft.ifft2(reconstruction))
     return reconstructed_image
 
-clock = generate_gray_and_resize("clock.jpg",800,800, "Clock")
+clock = generate_gray_and_resize("clock.jpg", 800, 800, "Clock")
 snow = generate_gray_and_resize("valley.jpeg", 800, 800, "Snow")
 
 clock_mag, clock_magnitude, clock_phase =  generate_spectrum(clock, "Spectrum information of Clock")
@@ -57,5 +57,5 @@ images[0].title.set_text("Magnitude Clock + Phase Snow")
 images[1].imshow(magBphaseA, cmap = "gray")
 images[1].title.set_text("Magnitude Snow + Phase Clock")
 figure.suptitle("Reconstructed Images")
-plt.show(figure)
+plt.show()
 figure.savefig("results/Reconstructed Images.jpg")
