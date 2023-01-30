@@ -30,6 +30,6 @@ _**The program has been done by running this exact file. This code file does 2 m
   ```python
   python main.py --combinations 0 1
   
-  **_Best Regards_**
-  
-  **_Mahammad Namazov_**
+**_Best Regards_**
+
+**_Mahammad Namazov_**
