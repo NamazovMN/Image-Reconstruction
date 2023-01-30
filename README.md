@@ -19,7 +19,16 @@ _**The program has been done by running this exact file. This code file does 2 m
  
  **_The folder is used to contain the results of the images, such as magnitude and phase information of all images and reconstructed image._**
  
-  ## 
+ ## How to test?
+  In order to test the project you can follow the steps that are given: 
+* Initially, you need to pull the project into your local machine; 
+* Then, you should run the following snippet to install all required dependencies: 
+  ```python
+  python main.py -r requirements.txt
+* You can add as much as images into your data folder, so that only combination of two images will be used for reconstruction, which should be provided by you.
+* Now you are all set to run the following snippet 
+  ```python
+  python main.py --combinations 0 1
   
   **_Best Regards_**
   
